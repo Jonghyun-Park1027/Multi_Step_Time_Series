@@ -27,7 +27,7 @@
 > - **_Preprocessing_** : Pandas, Pandas-Profiling 라이브러리, STL 분해 등의 EDA 결과 변동성이 높고 주기가 뚜렷한 데이터로 판단함. 그러나 계절에 영향을 받지 않고(구글링 및 지역 뉴스 분석) 일일 편차가 큼. 따라서 unique 함수를 통해 각 값이 1개만 존재하는 데이터와 이상치를 제거함. Winsorizing은 모델의 예측력을 하락시킴.
 > - **_Training_** : Multi Step Time Series Recursive Strategy를 활용한 RandomForestRegressor 활용
 > - **_Inference_** : 추론 결과 초기 MAE 99.2까지의 예측력을 보였으나 이후 Underfitting의 문제가 발생함. 이는 Recursive 모델의 오류 증폭 특성이 반영되었다고 판단됨.
-> - 주최측 요구 모델의 크기에 따른 시간적 한계 등으로 더 실험하지 못하고 Drop함.
+> - 주최측 요구 모델의 크기에 따른 시간적 한계 등으로 더 실험하지 못하고 Drop
 > ### 3. pr_test_report.html
 > - Pandas-Profiling 라이브러리를 활용한 Test 데이터 EDA
 > ### 4. pr_train_report.html
